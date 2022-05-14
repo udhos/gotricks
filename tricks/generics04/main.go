@@ -5,16 +5,16 @@ import (
 )
 
 func main() {
-	fmt.Printf("work1: %t\n", work1[[]string, string]([]string{}, "a"))
-	fmt.Printf("work2: %t\n", work2[[]string, string]([]string{}, "a"))
-	fmt.Printf("work3: %t\n", work3[[]string, string]([]string{}, "a"))
+	fmt.Printf("work1: %t\n", work1([]string{}, "a"))
+	fmt.Printf("work2: %t\n", work2([]string{}, "a"))
+	fmt.Printf("work3: %t\n", work3([]string{}, "a"))
 }
 
 // Interfaces used as constraints may be given names (such as Ordered),
 // or they may be literal interfaces inlined in a type parameter list.
 // For example:
 // [S interface{~[]E}, E interface{}]
-func work1[S interface{~[]E}, E interface{}](s S, e E) bool {
+func work1[S interface{ ~[]E }, E interface{}](s S, e E) bool {
 	return false
 }
 

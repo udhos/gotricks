@@ -11,10 +11,8 @@ func main() {
 }
 
 type tree[T any] struct {
-    left, right *tree[T]
-    value       T
+	left, right *tree[T]
+	value       T
 }
 
 func (t *tree[T]) lookup(x T) *tree[T] { return nil /* FIXME */ }
-
-
